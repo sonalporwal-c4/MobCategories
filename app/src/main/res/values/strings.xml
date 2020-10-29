@@ -1,0 +1,1 @@
+<resources>    <string name="app_name">MobCategories</string>    <string name="action_settings">Settings</string>    <string name="fetch_error_msg">An error occurred while fetching data, please try again.</string></resources>

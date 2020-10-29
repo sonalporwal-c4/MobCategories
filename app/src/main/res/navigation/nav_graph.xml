@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mainNavGraph"
+    app:startDestination="@id/listFragment">
+
+    <fragment
+        android:id="@+id/listFragment"
+        android:name="com.android.cleanRetrofit.presentation.ui.list.CategoryListFragment"
+        android:label="ListFragment"
+        tools:layout="@layout/fragment_story_list">
+        <action
+            android:id="@+id/action_profileFragment_to_detailFragment"
+            app:destination="@id/detailFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/detailFragment"
+        android:name="com.android.cleanRetrofit.presentation.ui.list.DetailsFragment"
+        android:label="DetailFragment"
+        tools:layout="@layout/details_fragment">
+    <argument
+        android:name="product"
+        app:argType="com.android.cleanRetrofit.data.net.models.Product"
+        app:nullable="false"/>
+    </fragment>
+
+</navigation>
